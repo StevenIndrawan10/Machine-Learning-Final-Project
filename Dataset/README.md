@@ -89,49 +89,6 @@ python illustration.py
 Output:
 - knn_vs_svm.png
 
-# Object Detection
-Contains all files related to the object detection pipeline, including the dataset, configuration files, trained model weights, and training scripts.
-
----
-
-## Files overview
-```bash
-objecttrain.py
-```
-Used to train and evaluate a YOLO-based object detection model on the OOPS dataset.
-- Loads a pretrained YOLO11-L model with COCO weights 
-- Fine-tunes the model on a custom 11-class dataset
-- Freezes first 15 network layers to preserve general visual features
-- Configures training parameters such as image size, batch size, and learning rate
-- Saves model checkpoints periodically every 5 epochs during training
-- Evaluates the trained model 
-
-```bash
-delete.py
-```
-Used to clean the dataset by removing empty label files and their corresponding images.
-- Detects empty or whitespace-only .txt files
-- Deletes invalid label files
-- Removes corresponding image files automatically
-- Outputs a deletion summary
-
-```bash
-check_class_ids.py
-```
-Scans YOLO label files in train, valid, and test folders
-- Reports which class IDs are present
-- Checks consistency with expected class mappings
-- Helps debug dataset labeling issues
-
-```bash
-data_oops.yaml
-```
-Dataset configuration file for YOLO training.
-- Defines dataset paths (train, valid, test)
-- Specifies class names and class IDs
-- Used during model training and evaluation
-
-
 # Object Recognition
 This includes the dataset, training, evaluation, and real-time inference using a webcam, for face recognition, before combining it with other models.
 
