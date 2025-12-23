@@ -131,3 +131,65 @@ Dataset configuration file for YOLO training.
 - Specifies class names and class IDs
 - Used during model training and evaluation
 
+
+# Object Recognition
+This includes the dataset, training, evaluation, and real-time inference using a webcam, for face recognition, before combining it with other models.
+
+## Files Overview
+```bash
+dataset/
+```
+Contains the object detection dataset structured in YOLO format.
+- Includes training, validation, and test images
+- Corresponding annotation files with bounding boxes and class labels
+- Organized for direct use with Ultralytics YOLO
+
+```bash
+data_oops.yaml
+```
+Dataset configuration file for YOLO training.
+- Defines dataset paths (train/val/test)
+- Lists all object class names
+- Used by YOLO during training and evaluation
+
+```bash
+training.py
+```
+Main script used to train the object detection model.
+- Loads a pretrained YOLO model
+- Trains on the custom dataset
+- Configures epochs, image size, and training parameters
+- Outputs training metrics and logs
+
+```bash
+delete.py
+```
+Used to clean the dataset by removing empty label files and their corresponding images.
+- Detects empty or whitespace-only .txt files
+- Deletes invalid label files
+- Removes corresponding image files automatically
+- Outputs a deletion summary
+
+```bash
+check_class_ids.py
+```
+Scans YOLO label files in train, valid, and test folders
+- Reports which class IDs are present
+- Checks consistency with expected class mappings
+- Helps debug dataset labeling issues
+
+```bash
+label.py
+```
+Used to relabel YOLO annotation files by modifying class IDs in-place.
+- Iterates through YOLO .txt label files
+- Updates class IDs to ensure consistency
+- Useful for fixing incorrect or inconsistent annotations
+
+```bash
+best.pt
+```
+Trained YOLO model weights.
+- Best-performing checkpoint saved during training
+- Used for inference and evaluation
+- Can be loaded for real-time or offline object detection
