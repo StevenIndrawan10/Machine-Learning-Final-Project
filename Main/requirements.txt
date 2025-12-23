@@ -17,5 +17,5 @@ opencv-python
 shapely
 face_recognition
 pandas
-scikit-learn
+scikit-learn==1.7.2
 transformers
