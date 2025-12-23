@@ -63,7 +63,7 @@ def merge_nms(detections, iou_thresh=0.5, prioritize_keys=True):
 
 
 COCO_WEIGHTS = "yolo11s.pt"
-KEYS_WEIGHTS = "best-7des.pt"
+KEYS_WEIGHTS = "best.pt"
 
 coco_model = YOLO(COCO_WEIGHTS)
 keys_model = YOLO(KEYS_WEIGHTS)
