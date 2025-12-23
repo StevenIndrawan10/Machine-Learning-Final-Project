@@ -193,3 +193,4 @@ Trained YOLO model weights.
 - Best-performing checkpoint saved during training
 - Used for inference and evaluation
 - Can be loaded for real-time or offline object detection
+Note: This two outputs need to be moved inside Main/ directory of the project to be used
