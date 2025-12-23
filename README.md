@@ -224,7 +224,7 @@ Trained YOLO model weights.
 - Used for inference and evaluation
 - Can be loaded for real-time or offline object detection
   
-Note: This two outputs need to be moved inside Main/ directory of the project to be used
+Note: This pretrained output need to be moved inside Main/ directory of the project to be used
 
 ## Authors
 1. A. M. Wijaya
