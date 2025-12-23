@@ -13,9 +13,13 @@ The system performs object-related ownership logic processing in the main code a
 ## Configuration
 
 Before running the project, the following values must be configure:
-- 'api.py': Set the required API key.
-- 'main.py': Configure camera input sources (IP cameras or USB camera indices).
+- 'Main/api.py': Set the required API keys.
+- 'Main/main.py': Configure camera input sources (IP cameras or USB camera indices).
 
+# Project Infer
+```bash
+cd Main/
+```
 ## Setup Instructions
 
 1. Create virtual environtment
@@ -60,7 +64,12 @@ python generate_data.py
 python train.py
 ```
 
-The model will be located in decision_model/ as lost_item_rf_model.pkl
+The model will be located in Main/decision_model/ as lost_item_rf_model.pkl
+
+# Model and Training
+```bash
+cd ../Dataset
+```
 
 # Face Recognition
 This includes the dataset collection, training, evaluation, and real-time inference using a webcam, for face recognition, before combining it with other models.
@@ -131,7 +140,7 @@ python train.py --dataset face_dataset
 Outputs:
 - face_recognition_model.pkl – trained SVM model
 - label_encoder.pkl – label encoder
-Note: This two outputs need to be moved to the main directory of the project to be used
+Note: This two outputs need to be moved inside Main/ directory of the project to be used
 
 ### 3. Evaluate the Model
 ```bash
