@@ -10,7 +10,7 @@ Before running the project, the following values must be configure:
 - 'Main/api.py': Set the required API keys.
 - 'Main/main.py': Configure camera input sources (IP cameras or USB camera indices).
 
-# Project Infer
+# Project Inferance
 ```bash
 cd Main/
 ```
