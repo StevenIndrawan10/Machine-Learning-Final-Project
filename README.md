@@ -140,6 +140,7 @@ python train.py --dataset face_dataset
 Outputs:
 - face_recognition_model.pkl – trained SVM model
 - label_encoder.pkl – label encoder
+  
 Note: This two outputs need to be moved inside Main/ directory of the project to be used
 
 ### 3. Evaluate the Model
