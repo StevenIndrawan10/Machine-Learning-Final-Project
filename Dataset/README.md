@@ -68,6 +68,8 @@ Outputs:
 - face_recognition_model.pkl – trained SVM model
 - label_encoder.pkl – label encoder
 
+Note: This two outputs need to be moved inside Main/ directory of the project to be used
+
 ### 3. Evaluate the Model
 ```bash
 python evaluate_metrics.py --test-dataset face_dataset_test
